@@ -20,10 +20,8 @@ public class CheckBoxesAssignment {
         List<WebElement> hobbies= driver.findElements(By.xpath("//input[@class='cb-element']"));
 
         for (WebElement select:hobbies){
-
-            if (select.getAttribute("value").equals("reading")){
-                select.click();
-            } else if (select.getAttribute("value").equals("cooking")) {
+        String options= select.getAttribute("id");
+            if (options.equals("cooking")||options.equals("reading")){
                 select.click();
             }
         }
